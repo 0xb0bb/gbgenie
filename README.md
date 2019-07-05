@@ -39,7 +39,7 @@ CODE = '004-BCE-E66'
 # decode a gameboy game genie code
 data = gbgenie.decode(CODE)
 print 'DECODE:  %s' % CODE
-print 'address: 0x%02x; original: 0x%02x; replacement: 0x%02x\n' % (data['addr'], data['original'], data['value'])
+print 'addr: 0x%02x; original: 0x%02x; replace: 0x%02x\n' % (data['addr'], data['original'], data['value'])
 
 # encode back into a gameboy game genie code
 code = gbgenie.encode(data['value'], data['addr'], data['original'])
