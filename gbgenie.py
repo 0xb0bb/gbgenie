@@ -22,7 +22,7 @@ def rl8(n, shift):
     return ((n << shift) | (n >> (8 - shift))) & 0xff
 
 
-def encode(addr, val, orig=None):
+def encode(val, addr, orig=None):
     code = '%02X' % val
     code += '%X-%02X%X' % ((addr & 0xf00) >> 8, addr & 0xff, 0xf - (addr >> 12))
 
